@@ -59,7 +59,13 @@ def main(page: ft.Page):
         
         if habit is not None:
             # Substituir o checkbox por um Textfield
-            index = habits_list.index(habit)
+            index = 0
+            for i, h in enumerate(habits_list):
+                if h[0] == habit_id:
+                    index = i
+                    break
+        
+        if index is not None:        
             habits.content.controls[index] = ft.Row(
                 controls =[
                     ft.TextField(
@@ -69,7 +75,7 @@ def main(page: ft.Page):
                     )
                 ]
             )
-            habits.update()
+        habits.update()
     
     def update_habit_title(e, habit):
         conn = sqlite3.connect('habits.db')
