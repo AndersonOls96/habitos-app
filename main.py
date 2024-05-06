@@ -30,9 +30,9 @@ def main(page: ft.Page):
     page.bgcolor = ft.colors.BLACK
     page.title = "Habitos App"
     page.padding = ft.padding.all(30)
-    page.window_height = 960
+    page.window_height = 900
     page.window_width = 600
-    page.window_resizable = False
+    page.window_resizable = True
 
     init_db()
 
@@ -187,6 +187,7 @@ def main(page: ft.Page):
 
             habits := ft.Container(
                 expand = True,
+                width= 600,
                 padding = ft.padding.all(20),
                 bgcolor = ft.colors.BROWN_50,
                 border_radius = ft.border_radius.all(20),
