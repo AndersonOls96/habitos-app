@@ -187,7 +187,7 @@ def main(page: ft.Page):
 
             habits := ft.Container(
                 expand = True,
-                width= 600,
+                width= 1920,
                 padding = ft.padding.all(20),
                 bgcolor = ft.colors.BROWN_50,
                 border_radius = ft.border_radius.all(20),
